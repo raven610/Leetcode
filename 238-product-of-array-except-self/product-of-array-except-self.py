@@ -18,5 +18,4 @@ class Solution:
                 ans.append(l1[i-1])
             else:
                 ans.append(l1[i-1]*l2[n-i-2])
-            
         return ans
