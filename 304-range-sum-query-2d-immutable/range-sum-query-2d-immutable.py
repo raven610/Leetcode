@@ -17,8 +17,3 @@ class NumMatrix:
         for i in range(row1,row2+1):
             s += self.subMatrix[i][col2] - self.subMatrix[i][col1-1] if col1 > 0 else self.subMatrix[i][col2]
         return s
-
-
-# Your NumMatrix object will be instantiated and called as such:
-# obj = NumMatrix(matrix)
-# param_1 = obj.sumRegion(row1,col1,row2,col2)
