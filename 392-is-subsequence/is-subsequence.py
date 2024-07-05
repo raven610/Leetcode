@@ -7,9 +7,7 @@ class Solution:
         while L < n and R < n2:
             if s[L] == t[R]:
                 L += 1
-                R += 1
-            else:
-                R += 1
+            R += 1
         if L == n:
             return True
         return False
