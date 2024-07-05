@@ -3,11 +3,6 @@ class Solution:
         ans = []
         n = len(nums)
         nums.sort()
-        print(nums)
-        if n == 3:
-            if nums[0] + nums[1] + nums[2] == 0:
-                return [nums]
-            return []
         for i in range(n):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
