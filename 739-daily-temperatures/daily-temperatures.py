@@ -20,7 +20,6 @@ class Solution:
         ans = [0]*n
         stack = Stack()
         for i in range(n):
-            #print(stack.stack,ans)
             if i > 0:
                 days = 1
                 while (stack.top() != -1) and (temperatures[i] > stack.top()[1]):
@@ -28,7 +27,4 @@ class Solution:
                     ans[element[0]] = i - element[0]
                     days += 1
             stack.push([i,temperatures[i]])
-        #while stack.top() != -1:
-        #    ans[i] = 0
-        #    stack.pop()
         return ans
