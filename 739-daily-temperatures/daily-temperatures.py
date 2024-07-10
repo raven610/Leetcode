@@ -20,11 +20,8 @@ class Solution:
         ans = [0]*n
         stack = Stack()
         for i in range(n):
-            if i > 0:
-                days = 1
-                while (stack.top() != -1) and (temperatures[i] > stack.top()[1]):
-                    element = stack.pop()
-                    ans[element[0]] = i - element[0]
-                    days += 1
+            while (stack.top() != -1) and (temperatures[i] > stack.top()[1]):
+                element = stack.pop()
+                ans[element[0]] = i - element[0]
             stack.push([i,temperatures[i]])
         return ans
