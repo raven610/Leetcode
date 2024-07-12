@@ -5,9 +5,6 @@ class Solution:
         posToSpeed.sort(key=lambda x: x[0], reverse=True)
         stack = []
         for i in posToSpeed:
-            if len(stack) > 0:
-                if (target-i[0])/i[1] > stack[-1]:
-                    stack.append((target-i[0])/i[1])
-            else:
+            if not (len(stack) > 0 and (target-i[0])/i[1] <= stack[-1]):
                 stack.append((target-i[0])/i[1])
         return len(stack)
