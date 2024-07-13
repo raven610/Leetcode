@@ -5,12 +5,12 @@ class Solution:
         MaxHigh = 0
         L = 0
         for R in range(n):
-            Profit = prices[R] - prices[L]
-            if Profit > CurrentHigh:
-                CurrentHigh = Profit
-                if MaxHigh < CurrentHigh:
-                    MaxHigh = CurrentHigh
-            if Profit < 0:
+            CurrentHigh = (prices[R] - prices[L])
+            if CurrentHigh < 0:
+                CurrentHigh = 0
                 L = R
+            if MaxHigh < CurrentHigh:
+                MaxHigh = CurrentHigh
+            print(L,R)
         return MaxHigh
             
