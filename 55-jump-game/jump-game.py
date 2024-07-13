@@ -5,6 +5,8 @@ class Solution:
         n = len(nums)
         while L <= MaxReachable and L < n:
             MaxReachable = max(L + nums[L] , MaxReachable)
+            if MaxReachable >= n-1:
+                return True
             L += 1
             
-        return True if MaxReachable >= n-1 else False
+        return False
