@@ -11,6 +11,5 @@ class Solution:
                 L = R
             if MaxHigh < CurrentHigh:
                 MaxHigh = CurrentHigh
-            print(L,R)
         return MaxHigh
             
