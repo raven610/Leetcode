@@ -4,9 +4,9 @@ class Solution:
         MaxReachable = nums[0]
         n = len(nums)
         while L <= MaxReachable and L < n:
-            MaxReachable = max(L + nums[L] , MaxReachable)
             if MaxReachable >= n-1:
                 return True
+            MaxReachable = max(L + nums[L] , MaxReachable)
             L += 1
             
         return False
