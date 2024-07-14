@@ -24,7 +24,6 @@ class Solution:
                 i += 1
             while i<n and path[i] == '/':
                 i += 1
-            print(s)
             if s != '':
                 if s == '..':
                     if stack.top() != None:
